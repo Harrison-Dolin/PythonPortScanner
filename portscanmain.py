@@ -17,10 +17,6 @@ print("Scanning target" + opnport)
 print("Time: " + str(datetime.now()))
 
 
-print("\nEnter the range for the scan")
-lowBound = input("\nEnter lower bound: ")
-upperBound = input("\nEnter upper bound: ")
-
 try:
     for prt in range(45, 80):
             sc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
