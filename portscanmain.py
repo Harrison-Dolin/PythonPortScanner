@@ -13,7 +13,7 @@ else:
     
     
 
-print("Scanning target" + target)
+print("Scanning target" + opnport)
 print("Time: " + str(datetime.now()))
 
 
