@@ -19,6 +19,7 @@ print("Time: " + str(datetime.now()))
 
 try:
     for prt in range(45, 80):
+            print("hello")
             sc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             socket.setdefaulttimeout(1)
             errorHandle = sc.connect_ex((opnport,prt))#Returns error indicator
