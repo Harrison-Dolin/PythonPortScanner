@@ -17,12 +17,12 @@ print("Scanning target" + opnport)
 print("Time: " + str(datetime.now()))
 
 
-print("\nEnter the range for the scan: ")
+print("\nEnter the range for the scan")
 lowBound = input("\nEnter lower bound: ")
 upperBound = input("\nEnter upper bound: ")
 
 try:
-    for prt in range(lowBound, upperBound):
+    for prt in range(int(lowBound), int(upperBound)):
             soc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             socket.setdefaulttimeout(0.1)
             errorHandle = s.connect_ex((opnport,prt))#Returns error indicator
