@@ -24,7 +24,7 @@ upperBound = input("\nEnter upper bound: ")
 try:
     for prt in range(int(lowBound), int(upperBound)):
             soc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            socket.setdefaulttimeout(0.1)
+            socket.setdefaulttimeout(1)
             errorHandle = soc.connect_ex((opnport,prt))#Returns error indicator
             if errorHandle == 0:
                 print("Port {} is open".format(prt))
