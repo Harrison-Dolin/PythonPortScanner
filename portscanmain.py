@@ -10,6 +10,7 @@ if len(sys.argv) == 2:
 else:
     print("Invalid command.")
     print("Syntax: python3 portscanmain.py <ip address>")
+    sys.exit()
     
     
 
