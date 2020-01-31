@@ -16,9 +16,16 @@ else:
 print("Scanning target" + opnport)
 print("Time: " + str(datetime.now()))
 
+print("\nEnter the range for the scan: ")
+lowBound = input("\nEnter lower bound: ")
+upperBound = input("\nEnter upper bound: ")
 
+if lowBound > upperBound or lowerBound < 0 or upperBound < 0
+    print("Invalid range")
+else:
+    
 try:
-    for prt in range(45, 80):
+    for prt in range(lowBound, upperBound):
             sc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             socket.setdefaulttimeout(1)
             errorHandle = sc.connect_ex((opnport,prt))#Returns error indicator
