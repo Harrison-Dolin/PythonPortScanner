@@ -20,26 +20,26 @@ print("\nEnter the range for the scan: ")
 lowBound = input("\nEnter lower bound: ")
 upperBound = input("\nEnter upper bound: ")
 
-if lowBound > upperBound or lowerBound < 0 or upperBound < 0
+if lowBound > upperBound or lowBound < 0 or upperBound < 0:
     print("Invalid range")
 else:
     
-try:
-    for prt in range(lowBound, upperBound):
-            sc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            socket.setdefaulttimeout(1)
-            errorHandle = sc.connect_ex((opnport,prt))#Returns error indicator
-            if errorHandle == 0:
-                print("Port {} is open".format(prt))
-            sc.close()
+    try:
+     for prt in range(lowBound, upperBound):
+        sc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        socket.setdefaulttimeout(1)
+        errorHandle = sc.connect_ex((opnport,prt))#Returns error indicator
+        if errorHandle == 0:
+            print("Port {} is open".format(prt))
+        sc.close()
 
-except socket.gaierror:
-    print("Hostname couldn't be resolved")
-    sys.exit()
+    except socket.gaierror:
+        print("Hostname couldn't be resolved")
+        sys.exit()
 
-except socket.error:
-    print("Can't connect to server")
-    sys.exit()
+    except socket.error:
+        print("Can't connect to server")
+        sys.exit()
     
-except KeyboardInterrupt:
-    sys.exit()
+    except KeyboardInterrupt:
+        sys.exit()
