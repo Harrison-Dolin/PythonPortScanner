@@ -29,7 +29,7 @@ if lowBound > upperBound or lowBound < 0 or upperBound < 0:
 else:
     #Loop to scan all ports within range
     try:
-     for prt in range(lowBound, upperBound):
+     for prt in range(int(lowBound), int(upperBound)):
         sc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         socket.setdefaulttimeout(1)
         errorHandle = sc.connect_ex((opnport,prt))#Returns error indicator
